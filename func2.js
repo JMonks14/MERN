@@ -28,8 +28,8 @@ function highest3() {
         args.push(arguments[i])
         i++
     }
-    args.sort(function(a, b){return a - b});
-    args.reverse()
+    args.sort(function(a, b){return b - a});
+    
     console.log(args);
     let ret1=args[0]
     let ret2=args[1]
