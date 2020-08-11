@@ -1,4 +1,4 @@
-function maths(no1=0,no2=0,opt="add") {
+let maths =function(no1=0,no2=0,opt="add") {
     let res=0
     switch(opt) {
         case "add":
@@ -18,6 +18,7 @@ function maths(no1=0,no2=0,opt="add") {
     }
     console.log("result is ",res);
 }
-maths(2,4,"mul")
-maths(9,3,"div")
-maths(1,1,"fish")
+// maths(2,4,"mul")
+// maths(9,3,"div")
+// maths(1,1,"fish")
+module.exports = maths
