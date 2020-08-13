@@ -8,7 +8,7 @@ app.get("/message/:name", function(req,res) {
     res.end()
 })
 
-app.get("/maths/:opt/:n1/:n2", function(req,res){
+app.get("/maths/:opt/:n1/:n2", (req,res) => {
     res.write(maths(req.params.n1,req.params.n2,req.params.opt))
     res.end()
 })
