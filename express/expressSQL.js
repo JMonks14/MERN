@@ -2,7 +2,7 @@ let express = require("express");
 let app = express()
 let mysql = require("mysql")
 
-function showAllRecords() {
+function showAllRecords(req,res) {
     
     let con=mysql.createConnection({
         host:"localhost",
@@ -15,8 +15,12 @@ function showAllRecords() {
         if(error) {
             console.log("something went wrong");
         } else {
+            res.writeHead(200,{'Content-Type': 'text/HTML'})
+            res.write(`<Table border="1"></Table>`)
+            res.write(`<tr><td>Reg number</td><td>Name</td></tr>`)
             results.forEach(record => {
                 console.log(record.regno + "..." + record.name + "..." + record.marks);
+                
             });
         }
     })
@@ -24,7 +28,7 @@ function showAllRecords() {
 }
 
 app.get("/showrecords", function(req,res){
-    showAllRecords()
+    showAllRecords(req,res)
 })
 
 app.listen(8030)
