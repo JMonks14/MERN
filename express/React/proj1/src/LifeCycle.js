@@ -20,7 +20,7 @@ componentWillMount(){
 	this.A++
 }
 render(){
-		//this.A=this.A+1
+		// this.A=this.A+1
 		return(
 		<>
 			->A={this.A}<br/>

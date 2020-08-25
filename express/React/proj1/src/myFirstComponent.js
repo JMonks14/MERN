@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Life from './LifeCycle.js';
+import Clock from './clock.js';
 
 
 
@@ -10,7 +10,7 @@ function fist() {
   return (
 	<div>
 		<div>
-			<Life />
+			<Clock />
 		</div>
 	</div>
     
