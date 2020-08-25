@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import State from './state.js';
+import Life from './LifeCycle.js';
 
 
 
@@ -10,11 +10,8 @@ function fist() {
   return (
 	<div>
 		<div>
-			<State />
+			<Life />
 		</div>
-		
-		
-		
 	</div>
     
   );
